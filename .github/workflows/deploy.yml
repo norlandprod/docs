@@ -40,6 +40,13 @@ jobs:
         run: npm install --frozen-lockfile
       - name: Build website
         run: npm run build
+      - name: Verify Pagefind Output
+        run: |
+          if [ ! -d "out/_pagefind" ]; then
+            echo "❌ Pagefind output is missing! Failing deployment."
+            exit 1
+          fi
+        shell: bash
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
