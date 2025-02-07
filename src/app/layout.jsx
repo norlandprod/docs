@@ -13,7 +13,7 @@ const oufit = Outfit({
   display: 'swap',
 })
  
-const banner = <Banner storageKey="some-key">Nextra 4.0 is released 🎉</Banner>
+// const banner = <Banner storageKey="some-key">Nextra 4.0 is released 🎉</Banner>
 
 const navbar = (
   <Navbar
@@ -54,7 +54,7 @@ export default async function RootLayout({ children }) {
       </Head>
       <body>
         <Layout
-          banner={banner}
+          // banner={banner}
           navbar={navbar}
           pageMap={await getPageMap()}
           docsRepositoryBase="https://github.com/norlandprod/docs/tree/main/docs"
